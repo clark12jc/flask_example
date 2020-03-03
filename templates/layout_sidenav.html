@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta name="description" content={{description}}>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='uswds-2.5.0/css/uswds.min.css') }}">
+    <script src="{{ url_for('static', filename='uswds-2.5.0/js/uswds.min.js') }}"></script>
+  </head>
+
+  <body>
+    {% include 'banner.html' %}
+    {% include 'navigation.html' %}
+    <div class="grid-container margin-top-5">
+      <div class="grid-row grid-gap">
+        <div class="desktop:grid-col-3 usa-layout-docs__sidenav">
+          {% block sidenav %}{% endblock %}
+        </div>
+        <main class="desktop:grid-col-9 usa-layout-docs__main usa-prose usa-layout-docs">
+          {% block content %}{% endblock %}
+        </main>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>
