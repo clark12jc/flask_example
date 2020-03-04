@@ -15,18 +15,6 @@ def home():
                                 with Flask & Jinja.")
 
 
-@app.route('/user/<username>')
-def profile(username):
-    """User profile."""
-    # Add db request to grab user info
-    return render_template('home_2.html',
-                           title=agency,
-                           h1=username,
-                           description="Smarter page templates \
-                                with Flask & Jinja.",
-                           username=username)
-
-
 @app.route('/demo')
 def demo():
     """Demo page."""
@@ -45,6 +33,14 @@ def demo_sidenav():
                            h1='Page Title',
                            description="Smarter page templates \
                                 with Flask & Jinja.")
+
+
+@app.route('/login')
+def login():
+    """Sidenav page."""
+    return render_template('login.html',
+                           title=agency
+                           )
 
 
 if __name__ == '__main__':
