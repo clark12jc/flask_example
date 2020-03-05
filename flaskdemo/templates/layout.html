@@ -12,11 +12,7 @@
   <body>
     {% include 'banner.html' %}
     {% include 'navigation.html' %}
-    <div class="grid-container margin-top-5">
-      <main class="usa-layout-docs__main usa-prose usa-layout-docs">
-          {% block content %}{% endblock %}
-      </main>
-    </div>
+    {% block content %}{% endblock %}
     {% include 'footer.html' %}
   </body>
 </html>

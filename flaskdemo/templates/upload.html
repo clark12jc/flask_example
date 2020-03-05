@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<style>
+  .usa-textarea__file {
+    max-width: 960px;
+    height: 20rem;
+  }
+</style>
+<div class="grid-container margin-top-5">
+  <main class="usa-layout-docs__main usa-prose usa-layout-docs">
+    <h1>File Upload</h1>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="usa-alert {{ 'usa-alert--error' if error else 'usa-alert--success' }}">
+      <div class="usa-alert__body">
+        {% for message in messages %}
+        <p class="usa-alert__text">{{ message }}</p>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <form class="usa-form" method="post" action="/upload" enctype="multipart/form-data">
+      <fieldset class="usa-fieldset">
+        <input class="usa-input" type="file" name="file" id="file" autocomplete="off" required />
+        <input class="usa-button" type="submit" value="Upload" />
+      </fieldset>
+    </form>
+
+    <h2>File Contents</h2>
+    <textarea class="usa-textarea usa-textarea__file" id="input-type-textarea" name="input-type-textarea">{{info}}</textarea>
+
+  </main>
+</div>
+{% endblock %}
