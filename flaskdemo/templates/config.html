@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<div class="grid-container margin-top-5">
+  <main class="usa-layout-docs__main usa-prose usa-layout-docs">
+    <form class="usa-form">
+        <fieldset class="usa-fieldset">
+            <legend class="usa-legend">Configuration</legend>
+
+            <label class="usa-label" for="agency">Agency Name</label>
+            <input class="usa-input" id="agency" name="agency" type="text">
+
+            <label class="usa-label" for="domain">Domain</label>
+            <input class="usa-input" id="domain" name="domain" type="text">
+
+            <label class="usa-label" for="">Old Path</label>
+            <input class="usa-input" id="" name="" type="text">
+
+            <label class="usa-label" for="">New Path</label>
+            <input class="usa-input" id="" name="" type="text">
+
+            <label class="usa-label" for="">Storage Directory</label>
+            <input class="usa-input" id="" name="" type="text">
+
+            <input class="usa-button" type="submit" value="Save">
+        </fieldset>
+    </form>
+  </main>
+</div>
+{% endblock %}

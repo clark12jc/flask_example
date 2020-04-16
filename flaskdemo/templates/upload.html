@@ -2,12 +2,6 @@
 
 
 {% block content %}
-<style>
-  .usa-textarea__file {
-    max-width: 960px;
-    height: 20rem;
-  }
-</style>
 <div class="grid-container margin-top-5">
   <main class="usa-layout-docs__main usa-prose usa-layout-docs">
     <h1>File Upload</h1>
@@ -26,7 +20,7 @@
 
     <form class="usa-form" method="post" action="/upload" enctype="multipart/form-data">
       <fieldset class="usa-fieldset">
-        <input class="usa-input" type="file" name="file" id="file" autocomplete="off" required />
+        <input class="usa-input" type="file" name="file" id="file" autocomplete="off"  />
         <input class="usa-button" type="submit" value="Upload" />
       </fieldset>
     </form>

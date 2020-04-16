@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<div class="grid-container margin-top-5">
+  <main class="usa-layout-docs__main usa-prose usa-layout-docs">
+    <h1>{{ h1 }}</h1>
+    <a href="{{ alias }}">{{ alias }}</a>
+    <div>{{ content|safe }}</div>
+    <script>
+      $(document).ready( function () {
+        $('#example').DataTable({
+          searching: false
+        });
+      } );
+    </script>
+  </main>
+</div>
+{% endblock %}

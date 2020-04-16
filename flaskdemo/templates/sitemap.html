@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<div class="grid-container margin-top-5">
+  <main class="usa-layout-docs__main usa-prose usa-layout-docs">
+    <h1>{{ h1 }}</h1>
+    <div>{{ content|safe }}</div>
+  </main>
+</div>
+{% endblock %}
